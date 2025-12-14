@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Reda - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              'fade-in': 'fadeIn 1s ease-out forwards',
+              'fade-in-up': 'fadeInUp 1s ease-out forwards',
+              'float': 'float 15s ease-in-out infinite',
+              'float-in': 'floatIn 0.8s ease-out forwards',
+              'slide-in-left': 'slideInLeft 1s ease-out forwards',
+              'slide-in-up': 'slideInUp 0.8s ease-out forwards',
+              'text-shimmer': 'textShimmer 3s linear infinite',
+              'spin-slow': 'spinSlow 10s linear infinite',
+              'glitch': 'glitch 0.3s ease-in-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0) translateX(0)' },
+                '25%': { transform: 'translateY(-20px) translateX(10px)' },
+                '50%': { transform: 'translateY(-10px) translateX(-10px)' },
+                '75%': { transform: 'translateY(-15px) translateX(5px)' },
+              },
+              floatIn: {
+                '0%': { opacity: '0', transform: 'translateY(50px) scale(0.8)' },
+                '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              },
+              slideInLeft: {
+                '0%': { opacity: '0', transform: 'translateX(-100px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              slideInUp: {
+                '0%': { opacity: '0', transform: 'translateY(100px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              textShimmer: {
+                '0%': { backgroundPosition: '-200% center' },
+                '100%': { backgroundPosition: '200% center' },
+              },
+              spinSlow: {
+                '0%': { transform: 'rotate(0deg)' },
+                '100%': { transform: 'rotate(360deg)' },
+              },
+              glitch: {
+                '0%, 100%': { transform: 'translate(0)' },
+                '20%': { transform: 'translate(-2px, 2px)' },
+                '40%': { transform: 'translate(-2px, -2px)' },
+                '60%': { transform: 'translate(2px, 2px)' },
+                '80%': { transform: 'translate(2px, -2px)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Global scrollbar styling for Webkit browsers */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #8b5cf6, #ef4444);
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #a78bfa, #f87171);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-black text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
